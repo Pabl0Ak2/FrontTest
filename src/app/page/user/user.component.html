@@ -4,8 +4,8 @@
       <div class="flex flex-wrap -mx-3 mb-0">
         <div class="w-full md:w-1/2 px-3">
           <div class="mt-3">
-            <input class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" formControlName="nombreCompleto" placeholder="Ingresa tu nombre">
-            <div *ngIf="empleadoForm.get('nombreCompleto')?.invalid && empleadoForm.get('nombreCompleto')?.touched">
+            <input class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white" type="text" formControlName="nombreCompleto" placeholder="Ingresa tu nombre">
+            <div *ngIf="empleadoForm.get('nombreCompleto')?.invalid && empleadoForm.get('nombreCompleto')?.touched" class="font-bold text-red-600 text-sm mt-0 ml-3">
               Nombre Completo es requerido
             </div>
           </div>
@@ -13,7 +13,7 @@
         <div class="w-full md:w-1/2 px-3">
           <div class="mt-3">
             <input type="date" class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" formControlName="fechaNacimiento">
-            <div *ngIf="empleadoForm.get('fechaNacimiento')?.invalid && empleadoForm.get('fechaNacimiento')?.touched">
+            <div *ngIf="empleadoForm.get('fechaNacimiento')?.invalid && empleadoForm.get('fechaNacimiento')?.touched" class="font-bold text-red-600 text-sm mt-0 ml-3">
               Fecha de Nacimiento es requerida
             </div>
           </div>
@@ -21,7 +21,7 @@
         <div class="w-full md:w-1/2 px-3">
           <div class="mt-3">
             <input type="number" class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" formControlName="edad" placeholder="Ingresa tu edad">
-            <div *ngIf="empleadoForm.get('edad')?.invalid && empleadoForm.get('edad')?.touched">
+            <div *ngIf="empleadoForm.get('edad')?.invalid && empleadoForm.get('edad')?.touched" class="font-bold text-red-600 text-sm mt-0 ml-3">
               Edad es requerida
             </div>
           </div>
@@ -34,7 +34,7 @@
               <option value="Coordinador">Coordinador</option>
               <option value="Subdirector">Subdirector</option>
             </select>
-            <div *ngIf="empleadoForm.get('tipoCargo')?.invalid && empleadoForm.get('tipoCargo')?.touched">
+            <div *ngIf="empleadoForm.get('tipoCargo')?.invalid && empleadoForm.get('tipoCargo')?.touched" class="font-bold text-red-600 text-sm mt-0 ml-3">
               Tipo de Cargo es requerido
             </div>
           </div>
@@ -54,7 +54,7 @@
     
   </div>
   <ng-template #noResults>
-    <p>No se encontraron empleados que coincidan con la búsqueda.</p>
+    <p class="font-bold text-red-600 text-sm mt-0 ml-3">No se encontraron empleados que coincidan con la búsqueda.</p>
   </ng-template>
   
   <div class="relative overflow-x-auto rounded w-full rounded-lg flex justify-center h-80">
